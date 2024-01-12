@@ -1,6 +1,6 @@
 "use client";
 
-import { headerLinks } from "@/Constants/inndex";
+import { headerLinks } from "@/Constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
