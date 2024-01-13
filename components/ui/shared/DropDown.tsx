@@ -1,5 +1,5 @@
 import React, { startTransition, useEffect, useState } from "react";
-import { ICategory } from "@/lib/database/models/category,model";
+import { ICategory } from "@/lib/database/models/category.model";
 
 import {
   Select,
