@@ -1,4 +1,8 @@
-import { getEventById } from "@/lib/actions/event.action";
+import Collection from "@/components/ui/shared/Collection";
+import {
+  getEventById,
+  getRelatedEventsByCategory,
+} from "@/lib/actions/event.action";
 import { formatDateTime } from "@/lib/utils";
 import { SearchParamProps } from "@/types";
 import Image from "next/image";
@@ -9,11 +13,11 @@ const EventDetails = async ({
 }: SearchParamProps) => {
   const event = await getEventById(id);
 
-  // const relatedEvents = await getRelatedEventsByCategory({
-  //   categoryId: event.category._id,
-  //   eventId: event._id,
-  //   page: searchParams.page as string,
-  // });
+  const relatedEvents = await getRelatedEventsByCategory({
+    categoryId: event.category._id,
+    eventId: event._id,
+    page: searchParams.page as string,
+  });
 
   return (
     <>
@@ -95,7 +99,7 @@ const EventDetails = async ({
       </section>
 
       {/* EVENTS with the same category */}
-      {/* <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
+      <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
         <h2 className="h2-bold">Related Events</h2>
 
         <Collection
@@ -104,10 +108,10 @@ const EventDetails = async ({
           emptyStateSubtext="Come back later"
           collectionType="All_Events"
           limit={3}
-          page={searchParams.page as string}
-          totalPages={relatedEvents?.totalPages}
+          page={1}
+          totalPages={2}
         />
-      </section> */}
+      </section>
     </>
   );
 };
