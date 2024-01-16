@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { DeleteConfirmation } from "./DeleteConfirmation";
-import { FilePenLine } from "lucide-react";
+import { CalendarClock, FilePenLine, MapPinned } from "lucide-react";
+import { Badge } from "@/components/ui/badge"
+
 
 type CardProps = {
   event: IEvent;
@@ -19,8 +21,10 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
 
   const isEventCreator = userId === event.organizer._id.toString();
 
+
+
   return (
-    <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-lg md:min-h-[438px]">
+    <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all hover:translate-y-[-10px] md:min-h-[438px]">
       <Link
         href={`/events/${event._id}`}
         style={{ backgroundImage: `url(${event.imageUrl})` }}
@@ -40,30 +44,34 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
 
       <div className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4">
         {!hidePrice && (
-          <div className="flex gap-2">
-            <span className="p-semibold-14 w-min rounded-full bg-green-100 px-4 py-1 text-green-60">
-              {event.isFree ? "FREE" : `$${event.price}`}
-            </span>
-            <p className="p-semibold-14 w-min rounded-full bg-grey-500/10 px-4 py-1 text-grey-500 line-clamp-1">
-              {event.category.name}
-            </p>
+          <div className="flex justify-between gap-2">
+            <p className="text-xl font-medium text-green-600">   {event.isFree ? "FREE" : `₦${event.price}`}</p>
+            <Badge variant="secondary"> {event.category.name}</Badge>
           </div>
         )}
 
-        <p className="p-medium-16 p-medium-18 text-grey-500">
-          {formatDateTime(event.startDateTime).dateTime}
-        </p>
-
         <Link href={`/events/${event._id}`}>
-          <p className="p-medium-16 md:p-medium-20 line-clamp-2 flex-1 text-black">
+          <p className="font-medium text-xl">
             {event.title}
           </p>
         </Link>
 
+        <p className="flex gap-3">
+          <CalendarClock strokeWidth={1.5} />
+          {formatDateTime(event.startDateTime).dateTime}
+        </p>
+
+        <p className="flex gap-3">
+          <MapPinned strokeWidth={1.5} />
+          {event.location}
+        </p>
+
+
+
         <div className="flex-between w-full">
-          <p className="p-medium-14 md:p-medium-16 text-grey-600">
+          {/* <p className="p-medium-14 md:p-medium-16 text-grey-600">
             {event.organizer.firstName} {event.organizer.lastName}
-          </p>
+          </p> */}
 
           {hasOrderLink && (
             <Link href={`/orders?eventId=${event._id}`} className="flex gap-2">

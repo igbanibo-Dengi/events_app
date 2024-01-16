@@ -22,7 +22,7 @@ const EventDetails = async ({
 
   return (
     <>
-      <section className="flex justify-center bg-primary-50 bg-dotted-pattern bg-contain">
+      <section className="flex justify-center pt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 2xl:max-w-7xl">
           <Image
             src={event.imageUrl}
@@ -100,7 +100,7 @@ const EventDetails = async ({
       </section>
 
       {/* EVENTS with the same category */}
-      <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
+      <section className="container my-8 flex flex-col gap-8 md:gap-12">
         <h2 className="h2-bold">Related Events</h2>
 
         <Collection

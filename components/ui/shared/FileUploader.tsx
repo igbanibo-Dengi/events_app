@@ -7,6 +7,7 @@ import { generateClientDropzoneAccept } from "uploadthing/client";
 
 import { Button } from "@/components/ui/button";
 import { convertFileToUrl } from "@/lib/utils";
+import { UploadCloud } from "lucide-react";
 
 type FileUploaderProps = {
   onFieldChange: (url: string) => void;
@@ -37,7 +38,7 @@ export function FileUploader({
       <input {...getInputProps()} className="cursor-pointer" />
 
       {imageUrl ? (
-        <div className="flex h-full w-full flex-1 justify-center ">
+        <div className="flex h-full w-full flex-1 justify-center items-center">
           <img
             src={imageUrl}
             alt="image"
@@ -47,17 +48,14 @@ export function FileUploader({
           />
         </div>
       ) : (
-        <div className="flex-center flex-col py-5 text-grey-500">
-          <img
-            src="/assets/icons/upload.svg"
-            width={77}
-            height={77}
-            alt="file upload"
-          />
-          <h3 className="mb-2 mt-2">Drag photo here</h3>
-          <p className="p-medium-12 mb-4">SVG, PNG, JPG</p>
-          <Button type="button" className="rounded-full">
-            Select from computer
+        <div className="flex justify-center items-center flex-col py-5 text-grey-500">
+
+          <UploadCloud size={40} strokeWidth={1} />
+          <h3 className="mb-2 mt-2">Drag your image here</h3>
+          <p className=" mb-4">SVG, PNG, JPG</p>
+          <p className="mb-4">or</p>
+          <Button type="button" variant={"outline"}>
+            Click to upload
           </Button>
         </div>
       )}
