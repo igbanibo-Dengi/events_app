@@ -16,6 +16,7 @@ export interface IOrder extends Document {
 }
 
 export type IOrderItem = {
+  buyerEmail: string
   _id: string
   totalAmount: string
   createdAt: Date
