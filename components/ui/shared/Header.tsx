@@ -8,13 +8,13 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="w-full border-b">
-      <div className="wrapper flex items-center justify-between">
+    <header className="w-full border-b py-5 fixed z-50 bg-background">
+      <div className="container flex items-center justify-between">
         <Link href="/" className="w-36">
           <Image
-            src="/assets/images/logo.svg"
-            width={128}
-            height={38}
+            src="/assets/images/logo.png"
+            width={300}
+            height={300}
             alt="logo"
           />
         </Link>

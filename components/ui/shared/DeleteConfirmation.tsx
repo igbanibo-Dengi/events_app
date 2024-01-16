@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/alert-dialog";
 
 import { deleteEvent } from "@/lib/actions/event.action";
+import { Trash2 } from "lucide-react";
 
 export const DeleteConfirmation = ({ eventId }: { eventId: string }) => {
   const pathname = usePathname();
@@ -24,13 +25,8 @@ export const DeleteConfirmation = ({ eventId }: { eventId: string }) => {
 
   return (
     <AlertDialog>
-      <AlertDialogTrigger>
-        <Image
-          src="/assets/icons/delete.svg"
-          alt="edit"
-          width={20}
-          height={20}
-        />
+      <AlertDialogTrigger className="text-red-500">
+        <Trash2 />
       </AlertDialogTrigger>
 
       <AlertDialogContent className="bg-white">

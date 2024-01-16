@@ -23,50 +23,50 @@ export default async function Home({ searchParams }: SearchParamProps) {
 
   return (
     <>
-      <section className="bg-primary/20 bg-dotted-pattern bg-contain py-5 md:py-10">
-        <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
-          <div className="flex flex-col justify-center gap-8">
-            <h1 className="h1-bold">
-              Host, Connect, Celebrate: Your Events, our Platform!
-            </h1>
-            <p className="p-regular-20 md:p-regular-24">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium sint harum obcaecati odio, quaerat
-            </p>
-            <Button className="w-full sm:w-fit" size={"lg"} asChild>
-              <Link href="#events">Expore Now</Link>
-            </Button>
-          </div>
-          <Image
-            src="/assets/images/hero.png"
-            alt="Hero"
-            width={1000}
-            height={1000}
-            className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
-          />
+      <section
+        className="relative w-full h-screen bg-cover bg-center md:h-[600px] lg:h-[700px] xl:h-[800px]  bg-[url('/hero_image.jpg')] "
+
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50" />
+        <div className="relative h-full flex flex-col justify-center items-center text-center px-4 md:px-6">
+          <h1 className="text-4xl font-bold  md:text-5xl lg:text-6xl text-primary">Find Your Next Event with Ticketlee</h1>
+          <p className="mt-4 text-xl text-white md:text-2xl lg:text-3xl mb-4">Where Every Event Begins</p>
+          <Button size={"lg"} className="px-8 text-lg font-medium h-12" asChild>
+            <Link href="#events">Find Tickets</Link>
+          </Button>
+
         </div>
       </section>
+
+
+
+
       <section
         id="events"
-        className="wrapper my-8 flex flex-col gap-8 md:gap-12"
+        className="container my-8 flex flex-col gap-10 md:gap-16"
       >
-        <h2 className="h2-bold">
-          Lorem, ipsum dolor sit amet <br /> elit. Minus, dicta?
-        </h2>
-        <div className="flex w-full flex-col gap-5 md:flex-row">
-          <Search />
-          <CategoryFilter />
-        </div>
+        <div className="flex justify-between w-full flex-col gap-5 md:gap-36 sm:flex-row basis-1/2">
+          <span>
+            <h2 className="text-3xl font-bold tracking-tighter whitespace-nowrap">Upcoming Events</h2>
+          </span>
+          <span className="flex  flex-col sm:flex-row gap-3 w-full">
 
-        <Collection
-          data={events?.data}
-          emptyTitle="No Events Found"
-          emptyStateSubtext="Try changing your search criteria"
-          collectionType="All_Events"
-          limit={6}
-          page={page}
-          totalPages={events?.totalPages}
-        />
+            <Search />
+            <CategoryFilter />
+          </span>
+        </div>
+        <div className="basis-1/2">
+
+          <Collection
+            data={events?.data}
+            emptyTitle="No Events Found"
+            emptyStateSubtext="Try changing your search criteria"
+            collectionType="All_Events"
+            limit={6}
+            page={page}
+            totalPages={events?.totalPages}
+          />
+        </div>
       </section>
     </>
   );

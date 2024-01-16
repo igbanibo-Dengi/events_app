@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Evenly",
-  description: "Event management",
+  title: "Ticketlee",
+  description: "find and sell tickets to your favorite events",
   icons: {
     icon: "/assets/images/logo.svg",
   },
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={poppins.className}>{children}</body>
+        <body className={poppins.className} >{children}</body>
       </html>
     </ClerkProvider>
   );
