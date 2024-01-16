@@ -1,14 +1,20 @@
 import { Button } from "@/components/ui/button";
 import Collection from "@/components/ui/shared/Collection";
+import Search from "@/components/ui/shared/Search";
 import { getAllEvents } from "@/lib/actions/event.action";
+import { SearchParamProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function Home() {
+export default async function Home({ searchParams }: SearchParamProps) {
+  const page = Number(searchParams?.page) || 1;
+  const searchText = (searchParams?.query as string) || "";
+  const category = (searchParams?.category as string) || "";
+
   const events = await getAllEvents({
-    query: "",
-    category: "",
-    page: 1,
+    query: searchText,
+    category,
+    page,
     limit: 6,
   });
 
@@ -47,6 +53,7 @@ export default async function Home() {
           Lorem, ipsum dolor sit amet <br /> elit. Minus, dicta?
         </h2>
         <div className="flex w-full flex-col gap-5 md:flex-row">
+          <Search />
           search CategoryFilter
         </div>
 
