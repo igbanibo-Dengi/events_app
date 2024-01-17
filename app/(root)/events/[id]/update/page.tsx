@@ -17,10 +17,11 @@ const UpdateEvent = async ({ params: { id } }: UpdateEventProps) => {
   return (
     <>
       <section className="container py-5 md:py-10">
-        <h3 className="container h3-bold text-center sm:text-left">
+        <h3 className="text-2xl font-bold text-center sm:text-left">
           Update Event
-        </h3>
-      </section>
+        </h3>ent
+      </h3>
+    </section >
 
       <div className="container my-8">
         <EventForm
