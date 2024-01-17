@@ -6,8 +6,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className=" bg-primary/20 py-12 px-4 md:px-6">
-      <div className="container mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <footer className=" bg-primary/5 py-12 px-4 md:px-6">
+      <div className="container mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col items-center md:items-start">
           <Link href="/">
             <Image
@@ -23,42 +23,42 @@ const Footer = () => {
             types of events.
           </p>
         </div>
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col mx-auto">
           <h3 className="text-lg font-semibold mb-2 text-primary">Follow Us</h3>
-          <div className="flex space-x-4">
-            <Link href="#">
-              <Facebook strokeWidth={1.5} />
-              <span className="sr-only">Facebook</span>
-            </Link>
-            <Link href="#">
+          <div className="flex flex-col gap-3 mt-3">
+            <Link href="#" className=" flex gap-2 items-center hover:text-primary hover:underline transition-all">
               <Twitter strokeWidth={1.5} />
-              <span className="sr-only">Twitter</span>
+              <span className="hover:text-primary transition-all">Twitter</span>
             </Link>
-            <Link href="#">
+            <Link href="#" className=" flex gap-2 items-center hover:text-primary hover:underline transition-all">
+              <Facebook strokeWidth={1.5} />
+              <span className="hover:text-primary transition-all">Facebook</span>
+            </Link>
+            <Link href="#" className=" flex gap-2 items-center hover:text-primary hover:underline transition-all">
               <Instagram strokeWidth={1.5} />
-              <span className="sr-only">Instagram</span>
+              <span className="hover:text-primary transition-all">Instagram</span>
             </Link>
           </div>
         </div>
         <div className="flex flex-col items-center md:items-start">
           <h3 className="text-lg font-semibold mb-2 text-primary">Contact Us</h3>
-          <p className="text-sm">
-            Email: support@ticketly.com
-            <br />
-            Phone: (123) 456-7890
-            <br />
-            Address: 123 Ticketly St, Event City, 12345
-          </p>
+          <div className="flex flex-col gap-3">
+            <p> Email: support@ticketly.com </p>
+            <p> Phone: (123) 456-7890</p>
+            <p> Address: 123 Ticketly St, Event City, 12345</p>
+
+
+          </div>
         </div>
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col gap-3 items-center md:items-start">
           <h3 className="text-lg font-semibold mb-2 text-primary">Quick Links</h3>
-          <Link className="text-sm hover:underline" href="#">
+          <Link className="hover:underline" href="#">
             FAQ
           </Link>
-          <Link className="text-sm hover:underline" href="#">
+          <Link className="hover:underline" href="#">
             Terms of Service
           </Link>
-          <Link className="text-sm hover:underline" href="#">
+          <Link className="hover:underline" href="#">
             Privacy Policy
           </Link>
         </div>

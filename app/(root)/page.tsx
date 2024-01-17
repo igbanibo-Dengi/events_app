@@ -1,3 +1,4 @@
+import Display from "@/components/display";
 import { Button } from "@/components/ui/button";
 import CategoryFilter from "@/components/ui/shared/CategoryFilter";
 import Collection from "@/components/ui/shared/Collection";
@@ -24,7 +25,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
   return (
     <>
       <section
-        className="relative w-full h-screen bg-cover bg-center md:h-[600px] lg:h-[700px] xl:h-[800px]  bg-[url('/hero_image.jpg')] "
+        className="relative w-full h-screen bg-cover bg-center md:h-[650px]  bg-[url('/hero_image.jpg')] "
 
       >
         <div className="absolute inset-0 bg-black bg-opacity-50" />
@@ -37,13 +38,12 @@ export default async function Home({ searchParams }: SearchParamProps) {
 
         </div>
       </section>
-
-
-
-
+      <section className=" bg-primary/5">
+        <Display />
+      </section>
       <section
         id="events"
-        className="container my-8 flex flex-col gap-10 md:gap-16"
+        className="container pt-5 my-8 flex flex-col gap-10 md:gap-16"
       >
         <div className="flex justify-between w-full flex-col gap-5 md:gap-36 sm:flex-row basis-1/2">
           <span>

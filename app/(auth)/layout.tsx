@@ -4,7 +4,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex-center min-h-screen w-full bg-primary-50 bg-dotted-pattern bg-cover bg-center">
+    <div className="flex items-center justify-center min-h-screen w-full bg-cover bg-center bg-[url('/auth.jpg')]">
       <main>{children}</main>
     </div>
   );
