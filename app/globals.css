@@ -49,6 +49,12 @@
   }
 }
 
+/* 
+.heroImage {
+  height: 500px;
+  z-index: 0;
+} */
+
 /* ========================================== REACT-DATEPICKER STYLES */
 .datePicker {
   width: 100%;
