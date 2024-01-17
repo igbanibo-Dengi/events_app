@@ -25,17 +25,9 @@ export default async function Home({ searchParams }: SearchParamProps) {
   return (
     <>
       <section
-        className="relative w-full h-screen bg-cover bg-center md:h-[650px] "
+        className="relative w-full h-screen md:h-[710px] bg-cover bg-center bg-[url('/auth-2.jpg')]"
       >
-        <Image
-          src='/hero_image.jpg'
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          alt="hero"
-          className="h-[500px] z-0"
-          priority
-        />
+
         <div className="absolute inset-0 bg-black bg-opacity-50" />
         <div className="relative h-full flex flex-col justify-center items-center text-center px-4 md:px-6">
           <h1 className="text-4xl font-bold  md:text-5xl lg:text-6xl text-primary">Find Your Next Event with Ticketlee</h1>
