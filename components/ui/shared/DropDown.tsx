@@ -69,7 +69,7 @@ const DropDown = ({ value, onChangeHandler }: DropdownProps) => {
             </SelectItem>
           ))}
 
-        <AlertDialog>
+        {/* <AlertDialog>
           <AlertDialogTrigger className="p-meduim-14 flex w-full rounded-sm py-3 pl-8 text-primary-500 hover:bg-primary-50 focus:text-primary-500">
             Add new Category
           </AlertDialogTrigger>
@@ -94,7 +94,7 @@ const DropDown = ({ value, onChangeHandler }: DropdownProps) => {
               </AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
-        </AlertDialog>
+        </AlertDialog> */}
       </SelectContent>
     </Select>
   );
