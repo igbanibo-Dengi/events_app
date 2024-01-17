@@ -45,7 +45,7 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
       <div className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4">
         {!hidePrice && (
           <div className="flex justify-between gap-2">
-            <p className="text-xl font-medium text-green-600">   {event.isFree ? "FREE" : `₦${event.price}`}</p>
+            <p className="text-xl font-medium text-green-600">   {event.isFree ? "FREE" : `$${event.price}`}</p>
             <Badge variant="secondary"> {event.category.name}</Badge>
           </div>
         )}

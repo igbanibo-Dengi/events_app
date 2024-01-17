@@ -9,7 +9,6 @@ import {
 import Image from "next/image";
 import { Separator } from "../separator";
 import NavItems from "./NavItems";
-import { UserButton } from "@clerk/nextjs";
 
 const MobileNav = () => {
   return (

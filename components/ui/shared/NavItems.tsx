@@ -9,10 +9,10 @@ const NavItems = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex flex-col md:flex-row gap-5 items-center">
+    <div className="flex flex-col md:flex-row gap-5 md:items-center">
       <Link href='/' className={`whitespace-nowrap ${pathname === '/' && 'text-primary'}`}>Home</Link>
       <Link href='/profile' className={`whitespace-nowrap ${pathname === '/profile' && 'text-primary'}`}>My Events</Link>
-      <Button asChild variant="outline" className={`whitespace-nowrap bg-primary hover:bg-primary/80 hover:text-white text-white ${pathname === '/profile' && 'hidden'}`}>
+      <Button asChild variant="outline" className={`whitespace-nowrap bg-primary hover:bg-primary/80 hover:text-white text-white ${pathname === '/profile' && 'md:hidden w-fit'}`}>
         <Link href='/events/create'>Create Event</Link>
       </Button>
     </div>

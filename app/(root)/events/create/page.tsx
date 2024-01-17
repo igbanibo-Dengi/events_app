@@ -5,12 +5,11 @@ const CreateEvent = () => {
   const { sessionClaims } = auth();
 
   const userId = sessionClaims?.userId as string;
-  // console.log(userId);
 
   return (
     <>
       <section className="container py-5 md:py-10">
-        <h3 className="wrapper h3-bold text-center sm:text-left">
+        <h3 className="text-2xl font-bold text-center sm:text-left">
           Create Event
         </h3>
       </section>

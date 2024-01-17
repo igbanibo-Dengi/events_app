@@ -8,7 +8,7 @@ const Display = () => {
     return (
         <div className='py-10 container'>
             <span className="text-center mb-5">
-                <h2 className="text-2xl md:text-3xl font-bold tracking-tighter whitespace-nowrap">Create and sell your ticket online</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tighter whitespace-nowrap">Create and sell your ticket online</h2>
                 <p>Promote, Sell and Manage any event, in any venue</p>
             </span>
 

@@ -27,7 +27,7 @@ const ProfilePage = async ({ searchParams }: SearchParamProps) => {
 
 
 
-      <Tabs defaultValue="tickets" className="container py-10">
+      <Tabs defaultValue="organized" className="container py-10">
 
         <TabsList>
           <TabsTrigger value="organized">Organized Events</TabsTrigger>
