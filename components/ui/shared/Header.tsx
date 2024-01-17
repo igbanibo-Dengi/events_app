@@ -18,12 +18,13 @@ const Header = () => {
             alt="logo"
           />
         </Link>
-        <SignedIn>
-          <nav className="md:flex hidden w-full max-w-xs">
-            <NavItems />
-          </nav>
-        </SignedIn>
-        <div className="flex w-32 justify-end gap-3">
+
+        <div className="flex w-fit items-center justify-end gap-3">
+          <SignedIn>
+            <nav className="md:flex hidden w-full max-w-xs">
+              <NavItems />
+            </nav>
+          </SignedIn>
           <SignedIn>
             <UserButton afterSignOutUrl="/" />
             <MobileNav />
