@@ -31,6 +31,7 @@ const EventDetails = async ({
             alt="hero image"
             width={1000}
             height={1000}
+            priority
             className="h-full min-h-[300px] object-cover object-center rounded-md"
           />
 
